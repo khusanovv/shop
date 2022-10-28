@@ -1,0 +1,21 @@
+.shop-cart {
+  max-width: 1200px;
+  height: auto;
+  padding: 0 50px;
+  background-color: aqua;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.shop-cart .cart__item {
+  width: 250px;
+  height: 300px;
+  background-color: rgb(136, 136, 136);
+}
+
+img {
+  max-width: 250px;
+  max-height: 250px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
