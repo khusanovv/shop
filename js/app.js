@@ -35,32 +35,19 @@ const cart = document.querySelector(".shop-cart");
             
             
 
-            // function myFunction() {
-            //     let text = "Press a button!\nEither OK or Cancel.";
-            //     if (confirm(text) == true) {
-            //       text = "Cart o`chirildi";
-            //     } else {
-            //       text = "You canceled!";
-            //     }
-            //     document.getElementById("demo").innerHTML = text;
-            //   }
-
-
             // Add class 
+
             div.classList.add("cart__item")
             desc.classList.add("desc")
 
+
             // Delete
-            
-           
-            
-            
+             
         })
         const shopCart = document.querySelector(".shop-cart");
             shopCart.addEventListener('click', (e)=>{
-              // console.log(e.target);
-              if(e.target.hasAttribute("data-target-id")){
-                  // console.log(e.target.dataset.productId);
+
+              if(confirm(e.target.hasAttribute("data-target-id"))){
                   const elementId = e.target.dataset.targetId
                 //   console.log(elementId);
                   fetch(`https://fakestoreapi.com/products/${elementId}` ,{
