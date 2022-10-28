@@ -3,6 +3,9 @@ let options = {
     method: "DELETE"
     
 }
+fetch("https://fakestoreapi.com/products" )
+        .then((data) => data.json())
+        .then((data2) => console.log(data2))
 const cart = document.querySelector(".shop-cart");
       fetch("https://fakestoreapi.com/products" )
         .then((data) => data.json())
@@ -21,14 +24,14 @@ const cart = document.querySelector(".shop-cart");
             img.src = element.image;
             img.alt = "Image"
             pEl.innerHTML = "Price: " + element.price
-            desc.innerHTML = "Desc: " + element.description.split("").splice(1, 70).join("") + "..."
+            desc.innerHTML = `<b>Desc: </b> ${element.description.split("").splice(1, 70).join("") + "..."}`
             btn.innerHTML = "U"
 
             // console.log(element.description.split("").splice(1, 80).join(""));
             
             cart.appendChild(div);
             
-            div.innerHTML = `<button data-target-id="${element.id}">delete</button>`
+            div.innerHTML = `<button class="cart__btn" data-target-id="${element.id}">delete</button>`
             div.appendChild(img );
             div.appendChild(pEl);
             div.appendChild(desc)
