@@ -1,11 +1,4 @@
-let api = "https://fakestoreapi.com/products"
-let options = {
-    method: "DELETE"
-    
-}
-fetch("https://fakestoreapi.com/products" )
-        .then((data) => data.json())
-        .then((data2) => console.log(data2))
+
 const cart = document.querySelector(".shop-cart");
       fetch("https://fakestoreapi.com/products" )
         .then((data) => data.json())
@@ -18,14 +11,15 @@ const cart = document.querySelector(".shop-cart");
                 desc = document.createElement("p"),
                 img = document.createElement("img"),
                 div = document.createElement("div"),
-                btn = document.createElement("button");
+                h3 = document.createElement("h2")
                 
 
             img.src = element.image;
             img.alt = "Image"
+            h3.textContent = element.category
             pEl.innerHTML = "Price: " + element.price
             desc.innerHTML = `<b>Desc: </b> ${element.description.split("").splice(1, 70).join("") + "..."}`
-            btn.innerHTML = "U"
+            
 
             // console.log(element.description.split("").splice(1, 80).join(""));
             
@@ -33,6 +27,7 @@ const cart = document.querySelector(".shop-cart");
             
             div.innerHTML = `<button class="cart__btn" data-target-id="${element.id}">delete</button>`
             div.appendChild(img );
+            div.appendChild(h3)
             div.appendChild(pEl);
             div.appendChild(desc)
             
@@ -42,7 +37,7 @@ const cart = document.querySelector(".shop-cart");
 
             div.classList.add("cart__item")
             desc.classList.add("desc")
-
+            
 
             // Delete
              
@@ -55,8 +50,11 @@ const cart = document.querySelector(".shop-cart");
                 //   console.log(elementId);
                   fetch(`https://fakestoreapi.com/products/${elementId}` ,{
                       method: "DELETE"
-                  })
-                  .then(res => console.log(res.json()))
+                  }) 
+                  .then(res => console.log(res.json()) 
+                  
+                  )
               }
           });
         });
+
