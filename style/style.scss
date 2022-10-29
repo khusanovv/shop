@@ -1,22 +1,32 @@
-
- .cart__search{
+.filter-btn{
     width: 100%;
-    height: 60px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
-   input{
-    margin: 0  auto;
-    margin-top: 20px;
-    width: 60%;
-    height: 40px;
-    border-radius: 10px;
-   }
-}.shop-cart{
+    gap: 50px;
+    button{
+        
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(255, 0, 0);
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+    }
+}
+.none{
+    display: none;
+}
+.shop-cart{
     max-width: 1300px;
     height: auto;
     padding: 0 10px;
     margin: 30px auto; 
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 50px;
    

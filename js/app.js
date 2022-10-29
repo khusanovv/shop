@@ -32,11 +32,16 @@ const cart = document.querySelector(".shop-cart");
             div.appendChild(desc)
             
             
-
             // Add class 
 
             div.classList.add("cart__item")
             desc.classList.add("desc")
+
+            // Filter
+            const menBtn = document.querySelectorAll(".filter-btn__item")
+            menBtn[0].addEventListener('click', ()=>{
+              
+            })
             
 
             // Delete
