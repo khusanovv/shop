@@ -1,3 +1,9 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 .filter-btn {
   width: 100%;
   margin-top: 40px;
@@ -37,6 +43,7 @@
   height: auto;
   border-radius: 10px;
   padding: 15px;
+  font-size: 18px;
   position: relative;
   overflow: hidden;
 }
@@ -55,12 +62,14 @@
 }
 .shop-cart .desc {
   padding: 8px;
+  font-size: 14px;
 }
 
 img {
   max-width: 250px;
   max-height: 250px;
   margin: 0 auto;
+  margin-bottom: 20px;
   z-index: -145;
 }
 img:hover {

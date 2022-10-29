@@ -16,16 +16,16 @@ const cart = document.querySelector(".shop-cart");
 
             img.src = element.image;
             img.alt = "Image"
-            h3.textContent = element.category
+            // h3.textContent = element.category
             pEl.innerHTML = "Price: " + element.price
             desc.innerHTML = `<b>Desc: </b> ${element.description.split("").splice(1, 70).join("") + "..."}`
             
 
-            // console.log(element.description.split("").splice(1, 80).join(""));
+            
             
             cart.appendChild(div);
             
-            div.innerHTML = `<button class="cart__btn" data-target-id="${element.id}">delete</button>`
+            div.innerHTML = `<button class="cart__btn"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-target-id="${element.id}">delete</button>`
             div.appendChild(img );
             div.appendChild(h3)
             div.appendChild(pEl);
@@ -50,8 +50,9 @@ const cart = document.querySelector(".shop-cart");
         const shopCart = document.querySelector(".shop-cart");
             shopCart.addEventListener('click', (e)=>{
 
-              if(confirm(e.target.hasAttribute("data-target-id"))){
+              if((confirm( e.target.hasAttribute("data-target-id")))){
                   const elementId = e.target.dataset.targetId
+                  
                 //   console.log(elementId);
                   fetch(`https://fakestoreapi.com/products/${elementId}` ,{
                       method: "DELETE"
